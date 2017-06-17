@@ -1,7 +1,6 @@
 import * as mocha from 'mocha';
 import * as chai from 'chai';
 
-import {log} from '../logger/logger';
 import {passwordCryptographer} from './password-cryptographer';
 import * as bcrypt from 'bcrypt-nodejs';
 const expect = chai.expect;
@@ -17,12 +16,12 @@ describe('bcrypt', () => {
         expect(isMatching).to.equal(true);
         done();
       }, (err) => {
-        log.error('Error while comparing:');
-        log.error(err);
+        console.error('Error while comparing:');
+        console.error(err);
       });
     }, (err) => {
-      log.error('Error while encrypting:');
-      log.error(err);
+      console.error('Error while encrypting:');
+      console.error(err);
     });
 
   });
@@ -36,12 +35,12 @@ describe('bcrypt', () => {
         expect(isMatching).to.equal(false);
         done();
       }, (err) => {
-        log.error('Error while comparing:');
-        log.error(err);
+        console.error('Error while comparing:');
+        console.error(err);
       });
     }, (err) => {
-      log.error('Error while encrypting:');
-      log.error(err);
+      console.error('Error while encrypting:');
+      console.error(err);
     });
 
   });

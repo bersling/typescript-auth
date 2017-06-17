@@ -1,10 +1,8 @@
 import * as passport from 'passport';
 import * as local from 'passport-local';
-import {dao} from '../db/dao';
 import {passwordCryptographer} from './password-cryptographer';
-import {User} from '../db/user.model';
-import * as expressSession from 'express-session';
-
+import {User} from './user.model';
+import * as mongo from 'tsmongo';
 
 export namespace passportInit {
 
@@ -16,7 +14,7 @@ export namespace passportInit {
       },
       function(email, password, done) {
 
-        dao.readOneByField('email', email, 'users', function (dbResp) {
+        mongo.dao.readOneByField('email', email, 'users', function (dbResp) {
           if (dbResp.error) {
             // It's better not to disclose whether username OR password is wrong
             return done(null, false, { message: 'Wrong password or username.' });
@@ -32,6 +30,7 @@ export namespace passportInit {
             });
           }
         });
+
       }
     ));
     return updatedPassport ? true : false;
