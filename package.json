@@ -1,0 +1,9 @@
+{
+  "name": "typescript-auth-module",
+  "version": "1.0.0",
+  "description": "Authentication module for written in typescript, built on bcrypt and passportjs.",
+  "main": "index.js",
+  "repository": "https://github.com/bersling/typescript-auth-module.git",
+  "author": "bersling@gmail.com",
+  "license": "MIT"
+}
