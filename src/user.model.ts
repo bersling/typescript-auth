@@ -7,4 +7,4 @@ export interface User {
   };
 }
 
-type HashingAlgorithm = 'bcrypt';
+export type HashingAlgorithm = 'bcrypt';
