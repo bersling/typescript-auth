@@ -1,6 +1,6 @@
 {
   "name": "tsauth",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "scripts": {
     "pub": "git add --all && git commit -m 'update' && git push && npm version patch && npm publish",
     "prepublish": "npm run build",
