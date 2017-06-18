@@ -3,6 +3,7 @@ import {passwordCryptographer} from './password-cryptographer';
 import {User} from './user.model';
 import {DatabaseResponse, dao, CreateResponse, ReadResponse} from 'tsmongo';
 
+
 export namespace userDAO {
 
   export function create(user: User, password: string, cb: (dbResponse: DatabaseResponse<CreateResponse>) => void) {
