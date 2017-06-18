@@ -1,4 +1,3 @@
-import * as mongo from 'mongodb';
 import {passwordCryptographer} from './password-cryptographer';
 import {User} from './user.model';
 import {DatabaseResponse, dao, CreateResponse, ReadResponse} from 'tsmongo';
