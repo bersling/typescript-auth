@@ -1,6 +1,6 @@
 {
   "name": "tsauth",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "types": "dist/index.d.ts",
   "scripts": {
     "pub": "git add --all && git commit -m 'update' && git push && npm version patch && npm publish",
