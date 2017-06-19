@@ -2,7 +2,7 @@ import * as mocha from 'mocha';
 import * as chai from 'chai';
 import {userDAO} from './user-dao';
 import {User} from './user.model';
-import {setupTests} from 'tsmongo';
+import {setupTests} from 'tsmysql';
 const expect = chai.expect;
 
 describe('UserDAO', () => {
@@ -16,11 +16,15 @@ describe('UserDAO', () => {
     };
 
     userDAO.create(user, '1234', (dbResponse) => {
+
+      console.log('oupsie?', dbResponse)
+
       expect(dbResponse.error).to.be.null;
       expect(dbResponse.data.uid).to.exist;
 
       userDAO.create(user, '1234', (innerDbResponse) => {
         expect(innerDbResponse.error).to.exist;
+        console.log(innerDbResponse.error);
         expect(innerDbResponse.error.message).to.equal('User already exists');
         done();
       });

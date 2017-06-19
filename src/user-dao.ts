@@ -1,6 +1,6 @@
 import {passwordCryptographer} from './password-cryptographer';
 import {User} from './user.model';
-import {DatabaseResponse, dao, CreateResponse, ReadResponse} from 'tsmongo';
+import {DatabaseResponse, dao, CreateResponse, ReadResponse} from 'tsmysql';
 
 
 export namespace userDAO {

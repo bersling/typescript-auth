@@ -24,7 +24,7 @@
     "mocha": "^3.4.2",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
-    "tsmongo": "^1.0.0"
+    "tsmysql": "^1.0.0"
   },
   "devDependencies": {
     "@types/bcrypt-nodejs": "^0.0.30",
