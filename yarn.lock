@@ -2,6 +2,38 @@
 # yarn lockfile v1
 
 
+"@tsmean/dbadapter@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@tsmean/dbadapter/-/dbadapter-1.0.4.tgz#664d697cfb274a85bbd5d7831e1725e1a05768de"
+  dependencies:
+    "@tsmean/mongo" "^1.0.1"
+    "@tsmean/mysql" "^1.0.4"
+    bcrypt-node "^0.1.0"
+    bcrypt-nodejs "^0.0.3"
+    chai "^4.0.2"
+    express "^4.15.3"
+    mocha "^3.4.2"
+    passport "^0.3.2"
+    passport-local "^1.0.0"
+
+"@tsmean/mongo@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@tsmean/mongo/-/mongo-1.0.1.tgz#73b2002f339275df34fddb4555d09cb136c17e51"
+  dependencies:
+    chai "^4.0.2"
+    chai-http "^3.0.0"
+    mocha "^3.4.2"
+    mongodb "^2.2.28"
+
+"@tsmean/mysql@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@tsmean/mysql/-/mysql-1.0.4.tgz#7b97185ebb2577819e0d76108e211b5f2d134577"
+  dependencies:
+    chai "^4.0.2"
+    chai-http "^3.0.0"
+    mocha "^3.4.2"
+    mysql "^2.13.0"
+
 "@types/bcrypt-nodejs@^0.0.30":
   version "0.0.30"
   resolved "https://registry.yarnpkg.com/@types/bcrypt-nodejs/-/bcrypt-nodejs-0.0.30.tgz#4cdd96b49293b3932122e4b7e29543e35e6bae58"
@@ -778,38 +810,6 @@ tsconfig@^6.0.0:
   dependencies:
     strip-bom "^3.0.0"
     strip-json-comments "^2.0.0"
-
-tsdbadapter@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/tsdbadapter/-/tsdbadapter-1.0.2.tgz#63553a54028de166a18e7d357aeb96eb97c6b721"
-  dependencies:
-    bcrypt-node "^0.1.0"
-    bcrypt-nodejs "^0.0.3"
-    chai "^4.0.2"
-    express "^4.15.3"
-    mocha "^3.4.2"
-    passport "^0.3.2"
-    passport-local "^1.0.0"
-    tsmongo "^1.0.0"
-    tsmysql "^1.0.6"
-
-tsmongo@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/tsmongo/-/tsmongo-1.0.0.tgz#1d2f001d5dc33aa78dc3adef86d5080f2be3f602"
-  dependencies:
-    chai "^4.0.2"
-    chai-http "^3.0.0"
-    mocha "^3.4.2"
-    mongodb "^2.2.28"
-
-tsmysql@^1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/tsmysql/-/tsmysql-1.0.6.tgz#4b0a7c6c8105b2bc243608810c35c1183e981658"
-  dependencies:
-    chai "^4.0.2"
-    chai-http "^3.0.0"
-    mocha "^3.4.2"
-    mysql "^2.13.0"
 
 type-detect@^3.0.0:
   version "3.0.0"

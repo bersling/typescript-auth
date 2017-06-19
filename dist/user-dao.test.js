@@ -2,10 +2,10 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const chai = require("chai");
 const user_dao_1 = require("./user-dao");
-const tsmongo_1 = require("tsmongo");
+const db_1 = require("./db");
 const expect = chai.expect;
 describe('UserDAO', () => {
-    tsmongo_1.setupTests.connectTestToDatabase();
+    db_1.database().setupTests.connectTestToDatabase();
     it('should be able to create user (only once)', function (done) {
         const user = {
             email: 'hans'

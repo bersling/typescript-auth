@@ -3,15 +3,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const passport = require("passport");
 const local = require("passport-local");
 const password_cryptographer_1 = require("./password-cryptographer");
+const db_1 = require("./db");
 var passportInit;
 (function (passportInit) {
     function initializePassportLocalStrategy() {
         const updatedPassport = passport.use('local', new local.Strategy({
             // by default, local strategy uses username and password, we will override with email
             usernameField: 'email',
-            passwordField: 'password',
+            passwordField: 'password'
         }, function (email, password, done) {
-            dbadapter(db).dao.readOneByField('email', email, 'users', function (dbResp) {
+            db_1.database().dao.readOneByField('email', email, 'users', function (dbResp) {
                 if (dbResp.error) {
                     // It's better not to disclose whether username OR password is wrong
                     return done(null, false, { message: 'Wrong password or username.' });

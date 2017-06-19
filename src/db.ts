@@ -1,6 +1,7 @@
-import {dbadapter} from 'tsdbadapter';
-import * as tsmongo from 'tsmongo'; // required to infer type
-import * as tsmysql from 'tsmysql'; // required to infer type
+import {dbadapter} from '@tsmean/dbadapter';
+import * as tsmongo from '@tsmean/mongo';
+import * as tsmysql from '@tsmean/mysql';
+
 const db = require('../properties/local.properties').db;
 
 export function database () {
