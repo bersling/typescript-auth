@@ -1,5 +1,5 @@
 {
-  "name": "tsauth",
+  "name": "@tsmean/auth",
   "version": "1.0.1",
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
@@ -24,7 +24,7 @@
     "mocha": "^3.4.2",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
-    "tsmongo": "^1.0.0"
+    "tsdbadapter": "^1.0.2"
   },
   "devDependencies": {
     "@types/bcrypt-nodejs": "^0.0.30",

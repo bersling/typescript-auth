@@ -91,6 +91,10 @@ bcrypt-nodejs@^0.0.3:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/bcrypt-nodejs/-/bcrypt-nodejs-0.0.3.tgz#c60917f26dc235661566c681061c303c2b28842b"
 
+bignumber.js@3.1.2:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/bignumber.js/-/bignumber.js-3.1.2.tgz#f3bdb99ad5268a15fc1f0bed2fb018e2693fe236"
+
 brace-expansion@^1.1.7:
   version "1.1.8"
   resolved "https://registry.yarnpkg.com/brace-expansion/-/brace-expansion-1.1.8.tgz#c07b211c7c952ec1f8efd51a77ef0d1d3990a292"
@@ -387,6 +391,10 @@ is-ip@1.0.0:
   dependencies:
     ip-regex "^1.0.0"
 
+isarray@0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/isarray/-/isarray-0.0.1.tgz#8a18acfca9a8f4177e09abfc6038939b05d1eedf"
+
 isarray@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/isarray/-/isarray-1.0.0.tgz#bb935d48582cba168c06834957a54a3e07124f11"
@@ -531,6 +539,14 @@ ms@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
 
+mysql@^2.13.0:
+  version "2.13.0"
+  resolved "https://registry.yarnpkg.com/mysql/-/mysql-2.13.0.tgz#998f1f8ca46e2e3dd7149ce982413653986aae47"
+  dependencies:
+    bignumber.js "3.1.2"
+    readable-stream "1.1.14"
+    sqlstring "2.2.0"
+
 negotiator@0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
@@ -602,6 +618,15 @@ qs@6.4.0, qs@^6.1.0, qs@^6.2.0:
 range-parser@~1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/range-parser/-/range-parser-1.2.0.tgz#f49be6b487894ddc40dcc94a322f611092e00d5e"
+
+readable-stream@1.1.14:
+  version "1.1.14"
+  resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-1.1.14.tgz#7cf4c54ef648e3813084c636dd2079e166c081d9"
+  dependencies:
+    core-util-is "~1.0.0"
+    inherits "~2.0.1"
+    isarray "0.0.1"
+    string_decoder "~0.10.x"
 
 readable-stream@2.2.7, readable-stream@^2.0.5:
   version "2.2.7"
@@ -675,9 +700,17 @@ source-map@^0.5.6:
   version "0.5.6"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.5.6.tgz#75ce38f52bf0733c5a7f0c118d81334a2bb5f412"
 
+sqlstring@2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/sqlstring/-/sqlstring-2.2.0.tgz#c3135c4ea8abcd7e7ee741a4966a891d86a4f191"
+
 "statuses@>= 1.3.1 < 2", statuses@~1.3.1:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/statuses/-/statuses-1.3.1.tgz#faf51b9eb74aaef3b3acf4ad5f61abf24cb7b93e"
+
+string_decoder@~0.10.x:
+  version "0.10.31"
+  resolved "https://registry.yarnpkg.com/string_decoder/-/string_decoder-0.10.31.tgz#62e203bc41766c6c28c9fc84301dab1c5310fa94"
 
 string_decoder@~1.0.0:
   version "1.0.2"
@@ -746,14 +779,37 @@ tsconfig@^6.0.0:
     strip-bom "^3.0.0"
     strip-json-comments "^2.0.0"
 
-tsmongo@x.x.x:
-  version "0.0.10"
-  resolved "https://registry.yarnpkg.com/tsmongo/-/tsmongo-0.0.10.tgz#bdc4a053f95a0b0637cae70b7afa35634cbcd52c"
+tsdbadapter@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/tsdbadapter/-/tsdbadapter-1.0.2.tgz#63553a54028de166a18e7d357aeb96eb97c6b721"
+  dependencies:
+    bcrypt-node "^0.1.0"
+    bcrypt-nodejs "^0.0.3"
+    chai "^4.0.2"
+    express "^4.15.3"
+    mocha "^3.4.2"
+    passport "^0.3.2"
+    passport-local "^1.0.0"
+    tsmongo "^1.0.0"
+    tsmysql "^1.0.6"
+
+tsmongo@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/tsmongo/-/tsmongo-1.0.0.tgz#1d2f001d5dc33aa78dc3adef86d5080f2be3f602"
   dependencies:
     chai "^4.0.2"
     chai-http "^3.0.0"
     mocha "^3.4.2"
     mongodb "^2.2.28"
+
+tsmysql@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/tsmysql/-/tsmysql-1.0.6.tgz#4b0a7c6c8105b2bc243608810c35c1183e981658"
+  dependencies:
+    chai "^4.0.2"
+    chai-http "^3.0.0"
+    mocha "^3.4.2"
+    mysql "^2.13.0"
 
 type-detect@^3.0.0:
   version "3.0.0"

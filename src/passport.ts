@@ -2,7 +2,7 @@ import * as passport from 'passport';
 import * as local from 'passport-local';
 import {passwordCryptographer} from './password-cryptographer';
 import {User} from './user.model';
-import * as mongo from 'tsmongo';
+import {database} from './db';
 
 export namespace passportInit {
 
@@ -10,11 +10,11 @@ export namespace passportInit {
     const updatedPassport = passport.use('local', new local.Strategy({
         // by default, local strategy uses username and password, we will override with email
         usernameField : 'email',
-        passwordField : 'password',
+        passwordField : 'password'
       },
       function(email, password, done) {
 
-        mongo.dao.readOneByField('email', email, 'users', function (dbResp) {
+        database().dao.readOneByField('email', email, 'users', function (dbResp) {
           if (dbResp.error) {
             // It's better not to disclose whether username OR password is wrong
             return done(null, false, { message: 'Wrong password or username.' });

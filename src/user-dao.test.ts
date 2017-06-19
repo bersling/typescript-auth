@@ -2,12 +2,12 @@ import * as mocha from 'mocha';
 import * as chai from 'chai';
 import {userDAO} from './user-dao';
 import {User} from './user.model';
-import {setupTests} from 'tsmongo';
+import {database} from './db';
 const expect = chai.expect;
 
 describe('UserDAO', () => {
 
-  setupTests.connectTestToDatabase();
+  database().setupTests.connectTestToDatabase();
 
   it('should be able to create user (only once)', function(done) {
 
@@ -26,7 +26,6 @@ describe('UserDAO', () => {
       });
 
     });
-
 
   });
 

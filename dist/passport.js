@@ -3,7 +3,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const passport = require("passport");
 const local = require("passport-local");
 const password_cryptographer_1 = require("./password-cryptographer");
-const mongo = require("tsmongo");
 var passportInit;
 (function (passportInit) {
     function initializePassportLocalStrategy() {
@@ -12,7 +11,7 @@ var passportInit;
             usernameField: 'email',
             passwordField: 'password',
         }, function (email, password, done) {
-            mongo.dao.readOneByField('email', email, 'users', function (dbResp) {
+            dbadapter(db).dao.readOneByField('email', email, 'users', function (dbResp) {
                 if (dbResp.error) {
                     // It's better not to disclose whether username OR password is wrong
                     return done(null, false, { message: 'Wrong password or username.' });
