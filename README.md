@@ -1,1 +1,1 @@
-Authentication module for written in typescript, built on bcrypt and passportjs.
+Authentication module written in typescript, built on bcrypt and passportjs.
