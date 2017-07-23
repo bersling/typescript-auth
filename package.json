@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "pub": "git add --all && git commit -m 'update' && git push && npm version patch && npm publish",
-    "prepublish": "npm run build",
+    "prepare": "npm run build",
     "build": "tsc",
     "test": "$(npm bin)/mocha --reporter spec --timeout 15000  --compilers ts:ts-node/register './src/**/*.test.ts'",
     "windows_test": "$(npm bin)/mocha --reporter spec --timeout 15000 --compilers ts:ts-node/register **\\*.test.ts",
@@ -13,7 +13,7 @@
     "lint": "tslint src/**/*.ts"
   },
   "description": "Authentication module for written in typescript, built on bcrypt and passportjs.",
-  "repository": "https://github.com/bersling/typescript-auth-module.git",
+  "repository": "https://github.com/tsmean/auth.git",
   "author": "bersling@gmail.com",
   "license": "MIT",
   "dependencies": {
