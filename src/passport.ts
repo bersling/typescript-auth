@@ -1,7 +1,6 @@
 import * as passport from 'passport';
 import * as local from 'passport-local';
 import {passwordCryptographer} from './password-cryptographer';
-import {User} from './user.model';
 import {database} from './db';
 
 export namespace passportInit {
